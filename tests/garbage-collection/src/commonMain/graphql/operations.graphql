@@ -1,0 +1,25 @@
+query MainQuery($userIds: [ID!]!) {
+  me {
+    id
+    name
+    email
+    admin
+    repositories {
+      id
+    }
+  }
+
+  users(ids: $userIds) {
+    id
+    name
+    email
+    admin
+    repositories {
+      id
+    }
+  }
+
+  repositories(first: 15) {
+    id
+  }
+}
